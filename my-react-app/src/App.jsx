@@ -1,7 +1,7 @@
 import { Header } from "./Header.jsx"
-export function App() {
+ function App() {
   return(
    <Header/>
   );
 }
-
+export default App;
