@@ -2,7 +2,6 @@ import flipkarthead from '../assets/flipkart.png'
 import dpicon from '../assets/dpicon.svg'
 import arrowicon from '../assets/arrowimage.svg'
 import carticon from '../assets/carticon.svg'
-import 
 export default function Header() {
     return (
         <header className='flex'>
