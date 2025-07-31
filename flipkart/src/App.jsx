@@ -20,9 +20,9 @@ const array = [{ image: category1, name: "Minutes" }, { image: category2, name: 
 function App() {
   return (
     <>
-      <div className='w-full  bg-gray-200'>
+      <div className='w-full  bg-gray-200 h-screen' >
         <Header></Header>
-        <section className='mx-10 h-30 flex justify-center gap-10  my-6 border items-center bg-white'>
+        <section className='m-5 h-40 flex justify-center gap-15  my-2 items-center bg-white'>
           {array.map((i, index) =>
             <Card key={index} image={i.image} name={i.name} />)}
         </section>
