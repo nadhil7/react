@@ -6,6 +6,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ImageSlider from './components/Slider.jsx'
+import BestDeal from "./components/bestdeals.jsx";
 
 //category images
 import category1 from './assets/imgi_18_a22a213ca6221b65.png'
@@ -27,7 +28,14 @@ import slider5 from './assets/slider5.jpg'
 import slider6 from './assets/slider6.jpg'
 import slider7 from './assets/slider7.jpg'
 
-
+//bestdeal images
+import staticimage from './assets/staticimage.webp'
+import BestDeal1 from './assets/bestdeal1.jpg'
+import BestDeal2 from './assets/bestdeal2.jpg'
+import BestDeal3 from './assets/bestdeal3.jpg'
+import BestDeal4 from './assets/bestdeal4.jpg'
+import BestDeal5 from './assets/bestdeal5.jpg'
+import BestDeal6 from './assets/bestdeal6.jpg'
 
 //category array
 const array = [
@@ -43,34 +51,55 @@ const arrays = [
   { images: slider3 }, { images: slider4 },
   { images: slider5 }, { images: slider6 },
   { images: slider7 }]
+
+//images of bestdeal
+const array1 = [
+  { image: BestDeal1, name: "Motorola edge20", price: 15000 }, { image: BestDeal2, name: "vivo v19", price: 40000 },
+  { image: BestDeal3, name: "realme GT60", price: 18000 }, { image: BestDeal4, name: "Poco C4", price: 14000 },
+  { image: BestDeal5, name: "Samsung A10", price: 24000 }]
+
+
 //image slider
 var settings = {
   dots: true,
-  speed:1000,
+  speed: 1000,
   infinite: true,
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 3000,
-  pauseOnHover: true,
-  
+
 };
 
 //function
 export default function App() {
   return (
     <>
-      <div className='w-full  bg-gray-200 h-screen' >
+      <div className='w-full  bg-gray-200 h-full' >
         <Header />
         <section className='m-5 h-40 flex justify-center gap-15  my-2 items-center bg-white'>
           {array.map((i, index) =>
             <Card key={index} image={i.image} name={i.name} />)}
         </section>
-        <section>
-          <Slider {...settings}>
-            {arrays.map((i, index) =>
-              <ImageSlider key={index} images={i.images} />)}
-          </Slider>
+        <section className="w-full p-6">
+          <section className="bg-white  ">
+            <Slider {...settings}>
+              {arrays.map((i, index) =>
+                <ImageSlider key={index} images={i.images} />)}
+            </Slider>
+          </section>
+        </section>
+        <section className="w-full flex gap-4 p-6">
+          <section className="  bg-white w-10/12">
+            <h2 className='font-bold p-6 text-2xl'>Best Deals On SmartPhones</h2>
+            <div className="flex px-10 gap-20 ">
+              {array1.map((i, index) =>
+                <BestDeal key={index} image={i.image} name={i.name} price={i.price} />)}
+            </div>
+          </section>
+          <div className="w-2/12 ">
+            <img src={staticimage} alt="" />
+          </div>
         </section>
       </div >
     </>
