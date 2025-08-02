@@ -11,6 +11,10 @@ export default function Useeffect() {
        const co = setInterval(() => {
             counter(count + 1)
         }, 1000)
+
+        return(()=>{
+            clearInterval(co)
+        })
     })
 
 
