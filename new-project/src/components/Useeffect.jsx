@@ -34,18 +34,18 @@ import { useEffect } from 'react'
 //     )
 // }
 
-// import React from 'react'
+import React from 'react'
 
-// function Useeffect() {
+function Useeffect() {
     
-//     return (
-//         <>
-//             <div>
-//                    <p></p>
-//                    <input type="text" />
-//             </div>
-//         </>
-//         )}
+    return (
+        <>
+            <div>
+                   <p></p>
+                   <input type="text" />
+            </div>
+        </>
+        )}
 
 export default Useeffect
 
