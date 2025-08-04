@@ -7,6 +7,9 @@ import FocusInput from './components/useref'
 import Greeting from './components/props'
 import Effect from './components/Effect'
 import State from './components/State'
+// import Usecontext from './components/Usecontext'
+import { Newname,Child1,Child2 } from './components/Usecontext'
+
 function App() {
   return (
     <>
@@ -18,6 +21,12 @@ function App() {
       {/* <Greeting name="asi"/> */}
       {/* <Effect/> */}
       <State/>
+    {/* <Newname.Provider value={"sameer"}>
+      <Child1></Child1>
+      <Child2></Child2>
+    </Newname.Provider> */}
+
+
     </>
   )
 }

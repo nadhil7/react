@@ -9,9 +9,7 @@ function State() {
     return (
 
         <>
-            <input value={text} onChange={(e) => {
-                changer(e)
-            }} type="text" />
+            <input value={text} onChange={changer} type="text" />
             <h1>{text}</h1>
         </>
     )
