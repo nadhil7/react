@@ -15,6 +15,7 @@ export default function Header() {
                 <a href="#" className='flex gap-2 p-4'><img src={carticon} alt="" /><h3>Cart</h3></a>
                 <a href="#" className='flex gap-2 p-4'><img src={headericon} alt="" /><h3>Become a Seller</h3></a>
                 <a href="#" className='flex gap-2 p-4'><img src={menudots} alt="" /></a>
+                <a href=""></a>
             </div>
         </header>
     );
